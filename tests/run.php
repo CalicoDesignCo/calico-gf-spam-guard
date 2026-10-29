@@ -9,6 +9,7 @@ function add_action( $name, $callback, $priority = 10, $args = 1 ) { add_filter(
 function get_option( $name, $default = false ) { global $options; return $options[$name] ?? $default; }
 function update_option( $name, $value, $autoload = null ) { global $options; $options[$name] = $value; }
 function delete_option( $name ) { global $options; unset( $options[$name] ); }
+function delete_site_transient( $name ) { global $options; unset( $options['_site_transient_' . $name] ); }
 function wp_parse_args( $value, $defaults ) { return array_merge( $defaults, $value ); }
 function sanitize_text_field( $value ) { return is_scalar( $value ) ? trim( strip_tags( $value ) ) : ''; }
 function absint( $value ) { return abs( (int) $value ); }

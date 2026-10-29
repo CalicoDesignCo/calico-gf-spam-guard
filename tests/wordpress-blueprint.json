@@ -1,0 +1,8 @@
+{
+  "steps": [
+    {
+      "step": "runPHP",
+      "code": "<?php require '/verification/wordpress-integration.php';"
+    }
+  ]
+}
