@@ -130,6 +130,7 @@ class CGSG_Plugin {
         // Only our two options; never delete Gravity Forms forms, entries or entry notes.
         delete_option( self::LOG );
         delete_option( self::OPTION );
+        delete_site_transient( 'cgsg_public_release_v1' );
         $this->pending = array();
         $this->alerted = array();
     }
